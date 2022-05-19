@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "nursing-navigator"
-include ':app'
+include(":app")
