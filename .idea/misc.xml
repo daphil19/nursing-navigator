@@ -5,8 +5,12 @@
       <map>
         <entry key="../../../../layout/compose-model-1652729238190.xml" value="1.0" />
         <entry key="../../../../layout/compose-model-1652747260996.xml" value="2.0" />
+        <entry key="../../../../layout/compose-model-1652929690834.xml" value="1.0" />
       </map>
     </option>
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
@@ -19,11 +23,23 @@
       <list>
         <OpenedFileInfo>
           <option name="caretOffset" value="0" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/settings.gradle" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/README.md" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="219" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/build.gradle" />
+          <option name="caretOffset" value="260" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/app/build.gradle.kts" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="242" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/app/src/main/java/dev/phillipslabs/nursingnavigator/NursingStatus.kt" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="624" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/build.gradle.kts" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="2776" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/app/src/main/java/dev/phillipslabs/nursingnavigator/MainActivity.kt" />
         </OpenedFileInfo>
       </list>
     </option>
