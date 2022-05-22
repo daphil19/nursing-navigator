@@ -5,7 +5,7 @@ plugins {
     id("org.jlleitschuh.gradle.ktlint")
 }
 
-val composeVersion: String by rootProject.extra
+val composeVersion = "1.1.1"
 
 configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
     android.set(true)
@@ -61,7 +61,6 @@ android {
 
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
-
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.compose.ui:ui:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
