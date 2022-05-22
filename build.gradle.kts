@@ -11,6 +11,11 @@ plugins {
     id("com.github.ben-manes.versions") version "0.42.0"
 }
 
+configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+    android.set(true)
+    version.set("0.45.2")
+}
+
 tasks.register<Delete>("clean") {
     delete(rootProject.buildDir)
 }

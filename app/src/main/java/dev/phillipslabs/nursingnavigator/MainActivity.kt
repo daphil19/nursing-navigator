@@ -21,11 +21,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import dev.phillipslabs.nursingnavigator.ui.theme.NursingNavigatorTheme
-import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
+import java.io.File
 
 private const val LOG_TAG = "NursingNavigator"
 private const val filename = "toggle_state.txt"

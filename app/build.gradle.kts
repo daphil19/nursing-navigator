@@ -7,10 +7,6 @@ plugins {
 
 val composeVersion = "1.1.1"
 
-configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
-    android.set(true)
-}
-
 android {
     compileSdk = 32
 
