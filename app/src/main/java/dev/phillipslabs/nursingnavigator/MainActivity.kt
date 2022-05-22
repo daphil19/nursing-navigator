@@ -1,6 +1,5 @@
 package dev.phillipslabs.nursingnavigator
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -12,16 +11,21 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Switch
 import androidx.compose.material.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import dev.phillipslabs.nursingnavigator.ui.theme.NursingNavigatorTheme
+import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import java.io.File
 
 private const val LOG_TAG = "NursingNavigator"
 private const val filename = "toggle_state.txt"
@@ -40,7 +44,11 @@ class MainActivity : ComponentActivity() {
         val initialStatus = try {
             JSON.decodeFromString(file.readText())
         } catch (_: Exception) {
-            Log.d(LOG_TAG, "Either the state file wasn't found, or the data was corrupted. Falling back to the default values")
+            Log.d(
+                LOG_TAG,
+                "Either the state file wasn't found, or the data was corrupted. " +
+                    "Falling back to the default values"
+            )
             NursingStatus()
         }
 
@@ -69,7 +77,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Toggle(toggled: Boolean, onToggleChange: (Boolean) -> Unit) {
-    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceEvenly) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
         Text(text = "Left", modifier = Modifier.scale(3.0f))
         Switch(checked = toggled, onCheckedChange = onToggleChange, modifier = Modifier.scale(3.0f))
         Text(text = "Right", modifier = Modifier.scale(3.0f))

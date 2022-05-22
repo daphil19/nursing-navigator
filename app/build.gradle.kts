@@ -1,10 +1,15 @@
 plugins {
-    id ("com.android.application")
-    id ("org.jetbrains.kotlin.android")
+    id("com.android.application")
+    kotlin("android")
     kotlin("plugin.serialization")
+    id("org.jlleitschuh.gradle.ktlint")
 }
 
 val composeVersion: String by rootProject.extra
+
+configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+    android.set(true)
+}
 
 android {
     compileSdk = 32
@@ -25,7 +30,12 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
-            proguardFiles.addAll(listOf(getDefaultProguardFile("proguard-android-optimize.txt"), File("proguard-rules.pro")))
+            proguardFiles.addAll(
+                listOf(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    File("proguard-rules.pro")
+                )
+            )
         }
     }
     compileOptions {
