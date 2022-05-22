@@ -6,8 +6,9 @@ plugins {
     id("com.android.library") version "7.2.0" apply false
     id("org.jetbrains.kotlin.android") version "1.6.10" apply false
     kotlin("plugin.serialization") version "1.6.10" apply false
-    // enable ktlint globally for all modules
+    // enable these plugins globally for all modules
     id("org.jlleitschuh.gradle.ktlint") version "10.3.0"
+    id("io.gitlab.arturbosch.detekt") version "1.20.0"
     id("com.github.ben-manes.versions") version "0.42.0"
 }
 
